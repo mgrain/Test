@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>搜索 &mdash; Muge&#39;s BLOG 1.0 文档</title>
+  <title>博客搭建 &mdash; Muge&#39;s BLOG 1.0 文档</title>
   
 
   
@@ -27,7 +27,8 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
-    <link rel="search" title="搜索" href="#" /> 
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="Welcome to Muge’s BLOG’s documentation!" href="index.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -59,7 +60,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -77,8 +78,12 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="make blog.html">博客搭建</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">博客搭建</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sphinx">安装 Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">项目托管</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -124,12 +129,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>搜索</li>
+      <li>博客搭建</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/make blog.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -141,24 +148,90 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="id1">
+<h1>博客搭建<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<blockquote>
+<div><p>Github        托管项目</p>
+<p>Sphinx        生成网页</p>
+<p>ReadtheDocs   发布网页</p>
+</div></blockquote>
+<div class="section" id="sphinx">
+<h2>安装 Sphinx<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>下载安装</li>
+</ul>
+<p>由于我使用了Anaconda,Sphinx库已经自带了，所以不做说明，没使用的可自行pip安装这个库</p>
+<ul>
+<li><p class="first">初始化</p>
+<blockquote>
+<div><ul>
+<li><p class="first">创建工程目录：    mkdir+文件夹名称</p>
+</li>
+<li><p class="first">转到工程目录下：  cd+目录地址</p>
+</li>
+<li><p class="first">初始化项目</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>到这一步初始化基本完成，之后一路选择默认就好</p>
+<ul>
+<li><p class="first">个性化配置：</p>
+<blockquote>
+<div><ul class="simple">
+<li>Project name;</li>
+<li>Author name;</li>
+<li>Project release[]:1.0;</li>
+<li>Project language[en]:zh_CN</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">创建成功</p>
+<blockquote>
+<div><ul class="simple">
+<li>build:html文件存放地</li>
+<li>source:源文件所在地</li>
+<li>Makefile:编译文件</li>
+<li>make.bat:WIN脚本</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">开始写博客</p>
+</li>
+</ul>
+<p>在source目录下新建xxx.rst。在里面开始写内容，保存之后在把文档写进目录排版index.rst里。</p>
+<p>目录配置文件：source\index.rst</p>
+<p>插入图片吧，写太麻烦</p>
+<ul class="simple">
+<li>生成网页</li>
+</ul>
+<p>在终端项目目录下输入</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
+</pre></div>
+</div>
+<p>再打开 build\html\index.html</p>
+</div>
+<div class="section" id="id2">
+<h2>项目托管<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to Muge’s BLOG’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -200,7 +273,6 @@
       <script type="text/javascript" src="_static/doctools.js"></script>
       <script type="text/javascript" src="_static/translations.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
   
 
@@ -210,14 +282,7 @@
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
-   
-
+  </script> 
 
 </body>
 </html>

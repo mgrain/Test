@@ -10,6 +10,6 @@ Welcome to Muge's BLOG's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   how_to
+   make blog
 
 
